@@ -20,12 +20,10 @@ properties:
     type: object
     description: A map containing the count of each access item
     additionalProperties:
-      type: string
+      type: number
   attributes:
     type: object
     description: A map containing the identity attributes
-    additionalProperties:
-      type: string    
 example:
   id: 2c9079b270a266a60170a2779fcb0007
   displayName: Lahoma Wuckert
