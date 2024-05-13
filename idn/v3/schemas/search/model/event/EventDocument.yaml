@@ -26,13 +26,9 @@ allOf:
         description: Event type. Refer to [Event Types](https://documentation.sailpoint.com/saas/help/search/index.html#event-types) for a list of event types and their meanings. 
         example: SYSTEM_CONFIG
       actor:
-        type: string
-        description: Name of the actor that generated the event. 
-        example: System
+        $ref: "./ActorType.yaml"          
       target:
-        type: string
-        description: Name of the target, or recipient, of the event. 
-        example: Carol.Adams
+        $ref: "./TargetType.yaml"
       stack:
         type: string
         description: The event's stack. 
