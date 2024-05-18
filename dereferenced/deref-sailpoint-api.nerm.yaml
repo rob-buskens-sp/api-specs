@@ -74,6 +74,10 @@ paths:
                       type: string
                       description: The user group strings
                       example: 'Administrator_group,Developer_group'
+                    locale:
+                      type: string
+                      description: The locale the user prefers to use
+                      example: fr-CA
       responses:
         '200':
           description: Expected response to a valid request
@@ -89,41 +93,67 @@ paths:
                         type: string
                         format: uuid
                         readonly: true
+                        example: db6f8e8b-65c2-47d5-a0db-90bcc4e9df9e
+                        description: ID of the object to retrieve or update
                       uid:
                         type: string
                         minLength: 32
                         maxLength: 32
                         readonly: true
+                        example: user1
+                        description: UID of the user
                       name:
                         type: string
+                        description: The name
+                        example: myusername
                       email:
                         type: string
                         format: email
+                        description: The email
+                        example: test@sailpoint.com
                       type:
                         type: string
                         enum:
                           - NeprofileUser
                           - NeaccessUser
                         default: NeprofileUser
+                        description: Type of user
+                        example: NeprofileUser
                       title:
                         type: string
+                        description: The title
+                        example: Director
                       status:
                         type: string
                         enum:
                           - Active
                           - Disabled
+                        description: Status of the user
+                        example: Active
                       login:
                         type: string
+                        description: The login
+                        example: myLogin
                       last_login:
                         type: string
                         format: date-time
                         readOnly: true
+                        description: When the user last logged in
+                        example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                       cookies_accepted_at:
                         type: string
                         format: date-time
                         readOnly: true
+                        description: When cookies were accepted
+                        example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                       preferred_language:
                         type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
+                      locale:
+                        type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
         '400':
           description: Bad Request - unable to complete.
           content:
@@ -242,41 +272,67 @@ paths:
                           type: string
                           format: uuid
                           readonly: true
+                          example: db6f8e8b-65c2-47d5-a0db-90bcc4e9df9e
+                          description: ID of the object to retrieve or update
                         uid:
                           type: string
                           minLength: 32
                           maxLength: 32
                           readonly: true
+                          example: user1
+                          description: UID of the user
                         name:
                           type: string
+                          description: The name
+                          example: myusername
                         email:
                           type: string
                           format: email
+                          description: The email
+                          example: test@sailpoint.com
                         type:
                           type: string
                           enum:
                             - NeprofileUser
                             - NeaccessUser
                           default: NeprofileUser
+                          description: Type of user
+                          example: NeprofileUser
                         title:
                           type: string
+                          description: The title
+                          example: Director
                         status:
                           type: string
                           enum:
                             - Active
                             - Disabled
+                          description: Status of the user
+                          example: Active
                         login:
                           type: string
+                          description: The login
+                          example: myLogin
                         last_login:
                           type: string
                           format: date-time
                           readOnly: true
+                          description: When the user last logged in
+                          example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                         cookies_accepted_at:
                           type: string
                           format: date-time
                           readOnly: true
+                          description: When cookies were accepted
+                          example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                         preferred_language:
                           type: string
+                          description: The locale the user prefers to use
+                          example: fr-CA
+                        locale:
+                          type: string
+                          description: The locale the user prefers to use
+                          example: fr-CA
                   _metadata:
                     type: object
                     properties:
@@ -382,6 +438,10 @@ paths:
                         type: string
                         description: The user group strings
                         example: 'Administrator_group,Developer_group'
+                      locale:
+                        type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
       responses:
         '200':
           description: Expected response to a valid request
@@ -400,41 +460,67 @@ paths:
                               type: string
                               format: uuid
                               readonly: true
+                              example: db6f8e8b-65c2-47d5-a0db-90bcc4e9df9e
+                              description: ID of the object to retrieve or update
                             uid:
                               type: string
                               minLength: 32
                               maxLength: 32
                               readonly: true
+                              example: user1
+                              description: UID of the user
                             name:
                               type: string
+                              description: The name
+                              example: myusername
                             email:
                               type: string
                               format: email
+                              description: The email
+                              example: test@sailpoint.com
                             type:
                               type: string
                               enum:
                                 - NeprofileUser
                                 - NeaccessUser
                               default: NeprofileUser
+                              description: Type of user
+                              example: NeprofileUser
                             title:
                               type: string
+                              description: The title
+                              example: Director
                             status:
                               type: string
                               enum:
                                 - Active
                                 - Disabled
+                              description: Status of the user
+                              example: Active
                             login:
                               type: string
+                              description: The login
+                              example: myLogin
                             last_login:
                               type: string
                               format: date-time
                               readOnly: true
+                              description: When the user last logged in
+                              example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                             cookies_accepted_at:
                               type: string
                               format: date-time
                               readOnly: true
+                              description: When cookies were accepted
+                              example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                             preferred_language:
                               type: string
+                              description: The locale the user prefers to use
+                              example: fr-CA
+                            locale:
+                              type: string
+                              description: The locale the user prefers to use
+                              example: fr-CA
                   - type: object
                     properties:
                       info:
@@ -545,6 +631,10 @@ paths:
                         type: string
                         description: The group strings
                         example: 'Administrator_group,Developer_group'
+                      locale:
+                        type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
       responses:
         '200':
           description: Expected response to a valid request
@@ -563,41 +653,67 @@ paths:
                               type: string
                               format: uuid
                               readonly: true
+                              example: db6f8e8b-65c2-47d5-a0db-90bcc4e9df9e
+                              description: ID of the object to retrieve or update
                             uid:
                               type: string
                               minLength: 32
                               maxLength: 32
                               readonly: true
+                              example: user1
+                              description: UID of the user
                             name:
                               type: string
+                              description: The name
+                              example: myusername
                             email:
                               type: string
                               format: email
+                              description: The email
+                              example: test@sailpoint.com
                             type:
                               type: string
                               enum:
                                 - NeprofileUser
                                 - NeaccessUser
                               default: NeprofileUser
+                              description: Type of user
+                              example: NeprofileUser
                             title:
                               type: string
+                              description: The title
+                              example: Director
                             status:
                               type: string
                               enum:
                                 - Active
                                 - Disabled
+                              description: Status of the user
+                              example: Active
                             login:
                               type: string
+                              description: The login
+                              example: myLogin
                             last_login:
                               type: string
                               format: date-time
                               readOnly: true
+                              description: When the user last logged in
+                              example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                             cookies_accepted_at:
                               type: string
                               format: date-time
                               readOnly: true
+                              description: When cookies were accepted
+                              example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                             preferred_language:
                               type: string
+                              description: The locale the user prefers to use
+                              example: fr-CA
+                            locale:
+                              type: string
+                              description: The locale the user prefers to use
+                              example: fr-CA
                   - type: object
                     properties:
                       info:
@@ -673,41 +789,67 @@ paths:
                         type: string
                         format: uuid
                         readonly: true
+                        example: db6f8e8b-65c2-47d5-a0db-90bcc4e9df9e
+                        description: ID of the object to retrieve or update
                       uid:
                         type: string
                         minLength: 32
                         maxLength: 32
                         readonly: true
+                        example: user1
+                        description: UID of the user
                       name:
                         type: string
+                        description: The name
+                        example: myusername
                       email:
                         type: string
                         format: email
+                        description: The email
+                        example: test@sailpoint.com
                       type:
                         type: string
                         enum:
                           - NeprofileUser
                           - NeaccessUser
                         default: NeprofileUser
+                        description: Type of user
+                        example: NeprofileUser
                       title:
                         type: string
+                        description: The title
+                        example: Director
                       status:
                         type: string
                         enum:
                           - Active
                           - Disabled
+                        description: Status of the user
+                        example: Active
                       login:
                         type: string
+                        description: The login
+                        example: myLogin
                       last_login:
                         type: string
                         format: date-time
                         readOnly: true
+                        description: When the user last logged in
+                        example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                       cookies_accepted_at:
                         type: string
                         format: date-time
                         readOnly: true
+                        description: When cookies were accepted
+                        example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                       preferred_language:
                         type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
+                      locale:
+                        type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
         '400':
           description: Bad Request - unable to complete.
           content:
@@ -808,6 +950,10 @@ paths:
                       type: string
                       description: The group strings
                       example: 'Administrator_group,Developer_group'
+                    locale:
+                      type: string
+                      description: The locale the user prefers to use
+                      example: fr-CA
       responses:
         '200':
           description: Expected response to a valid request
@@ -823,41 +969,67 @@ paths:
                         type: string
                         format: uuid
                         readonly: true
+                        example: db6f8e8b-65c2-47d5-a0db-90bcc4e9df9e
+                        description: ID of the object to retrieve or update
                       uid:
                         type: string
                         minLength: 32
                         maxLength: 32
                         readonly: true
+                        example: user1
+                        description: UID of the user
                       name:
                         type: string
+                        description: The name
+                        example: myusername
                       email:
                         type: string
                         format: email
+                        description: The email
+                        example: test@sailpoint.com
                       type:
                         type: string
                         enum:
                           - NeprofileUser
                           - NeaccessUser
                         default: NeprofileUser
+                        description: Type of user
+                        example: NeprofileUser
                       title:
                         type: string
+                        description: The title
+                        example: Director
                       status:
                         type: string
                         enum:
                           - Active
                           - Disabled
+                        description: Status of the user
+                        example: Active
                       login:
                         type: string
+                        description: The login
+                        example: myLogin
                       last_login:
                         type: string
                         format: date-time
                         readOnly: true
+                        description: When the user last logged in
+                        example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                       cookies_accepted_at:
                         type: string
                         format: date-time
                         readOnly: true
+                        description: When cookies were accepted
+                        example: 'Wed, 07 Feb 2024 12:55:20.456682000 EST -05:00'
                       preferred_language:
                         type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
+                      locale:
+                        type: string
+                        description: The locale the user prefers to use
+                        example: fr-CA
         '400':
           description: Bad Request - unable to complete.
           content:
@@ -1030,6 +1202,94 @@ paths:
                     type: string
                     format: url
                     readOnly: true
+        '400':
+          description: Bad Request - unable to complete.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    properties:
+                      error:
+                        example: Invalid JSON syntax. Please check your syntax and try again.
+                  - type: object
+                    properties:
+                      error:
+                        example: The <object> failed to create/update
+                      errors:
+                        example:
+                          attribute: can't be blank
+        '500':
+          description: Internal Server Error - returned on unhandled exceptions.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    description: A message describing the error
+                    example: Sorry something went wrong
+  '/languages/{locale}':
+    patch:
+      summary: Update a language by locale
+      operationId: patchLanguage
+      description: Update a language by locale
+      tags:
+        - languages
+      parameters:
+        - name: language_locale
+          in: path
+          description: Language locale of the object
+          required: true
+          schema:
+            type: string
+            format: string
+            example: es
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                language:
+                  type: object
+                  properties:
+                    default:
+                      type: boolean
+                      description: 'Set default to True to set a default language, to set another language to default, set default to True on the target language and the current default will become disabled'
+                      example: true
+                    enabled:
+                      type: boolean
+                      description: 'True when the language is enabled, False when it is not'
+                      example: true
+                    locale:
+                      type: string
+                      description: 'The locale string for the language, current options are- en, fr, es, de, fr-CA'
+                      example: es
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  language:
+                    type: object
+                    properties:
+                      default:
+                        type: boolean
+                        description: 'Set default to True to set a default language, to set another language to default, set default to True on the target language and the current default will become disabled'
+                        example: true
+                      enabled:
+                        type: boolean
+                        description: 'True when the language is enabled, False when it is not'
+                        example: true
+                      locale:
+                        type: string
+                        description: 'The locale string for the language, current options are- en, fr, es, de, fr-CA'
+                        example: es
         '400':
           description: Bad Request - unable to complete.
           content:
@@ -5603,53 +5863,21 @@ paths:
                       default: false
                       description: Is this profile type synced with ics
                       example: false
-                    profile_type_dup_attributes:
+                    profile_type_dup_attributes_attributes:
                       type: array
                       items:
                         type: object
                         properties:
-                          id:
-                            type: string
-                            format: uuid
-                            description: The ID of the properties that are used for duplication protection.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
-                          uid:
-                            type: string
-                            minLength: 32
-                            maxLength: 32
-                            description: The uid of the properties that are used for duplication protection.
-                            example: attribute-uid
-                          profile_type_id:
-                            type: string
-                            format: uuid
-                            description: The ID of the profile type.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
                           ne_attribute_id:
                             type: string
                             format: uuid
                             description: The ID of the ne attribute.
                             example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
-                    profile_type_namings:
+                    profile_type_namings_attributes:
                       type: array
                       items:
                         type: object
                         properties:
-                          id:
-                            type: string
-                            format: uuid
-                            description: The ID of the profile type naming.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
-                          uid:
-                            type: string
-                            minLength: 32
-                            maxLength: 32
-                            description: The UID of the profile type naming.
-                            example: profile-type-name
-                          profile_type_id:
-                            type: string
-                            format: uuid
-                            description: The ID of the associated profile type.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
                           ne_attribute_id:
                             type: string
                             format: uuid
@@ -6230,53 +6458,21 @@ paths:
                       default: false
                       description: Is this profile type synced with ics
                       example: false
-                    profile_type_dup_attributes:
+                    profile_type_dup_attributes_attributes:
                       type: array
                       items:
                         type: object
                         properties:
-                          id:
-                            type: string
-                            format: uuid
-                            description: The ID of the properties that are used for duplication protection.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
-                          uid:
-                            type: string
-                            minLength: 32
-                            maxLength: 32
-                            description: The uid of the properties that are used for duplication protection.
-                            example: attribute-uid
-                          profile_type_id:
-                            type: string
-                            format: uuid
-                            description: The ID of the profile type.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
                           ne_attribute_id:
                             type: string
                             format: uuid
                             description: The ID of the ne attribute.
                             example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
-                    profile_type_namings:
+                    profile_type_namings_attributes:
                       type: array
                       items:
                         type: object
                         properties:
-                          id:
-                            type: string
-                            format: uuid
-                            description: The ID of the profile type naming.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
-                          uid:
-                            type: string
-                            minLength: 32
-                            maxLength: 32
-                            description: The UID of the profile type naming.
-                            example: profile-type-name
-                          profile_type_id:
-                            type: string
-                            format: uuid
-                            description: The ID of the associated profile type.
-                            example: 33f072dd-13b4-41e1-8ea0-16f2a59b57c8
                           ne_attribute_id:
                             type: string
                             format: uuid
